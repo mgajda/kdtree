@@ -3,7 +3,7 @@ Name:                KdTree
 -- The package version. See the Haskell package versioning policy
 -- (http://www.haskell.org/haskellwiki/Package_versioning_policy) for
 -- standards guiding when and how versions should be incremented.
-Version:             0.2
+Version:             0.2.1
 Synopsis:            KdTree, for efficient search in K-dimensional point clouds.
 Description:         
     This is a simple library for k-d trees in Haskell. It enables efficient
@@ -20,6 +20,7 @@ Category:            Graphics
 Build-type:          Simple
 Cabal-version:       >=1.6
 Extra-source-files:  README
+Tested-with:         ghc==7.4.1,ghc==7.4.2,ghc==7.6.1
 
 source-repository head
   type:     git
@@ -27,7 +28,7 @@ source-repository head
 
 Library
   Exposed-modules: Data.Trees.KdTree
-  Build-depends: base < 5
+  Build-depends: base < 5, QuickCheck >= 2
   
 Executable KdTreeTest
   Main-is: KdTreeTest.hs
